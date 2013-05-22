@@ -1,8 +1,7 @@
 package com.zeroclue.jmeter.protocol.amqp;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import org.apache.jmeter.samplers.AbstractSampler;
 import org.apache.jmeter.testelement.ThreadListener;
@@ -76,6 +75,7 @@ public abstract class AMQPSampler extends AbstractSampler implements ThreadListe
         if(channel == null) {
             channel = createChannel();
             setChannel(channel);
+
             //TODO: Break out queue binding
             boolean queueConfigured = (getQueue() != null && !getQueue().isEmpty());
 
