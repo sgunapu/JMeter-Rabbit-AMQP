@@ -24,14 +24,6 @@ public class AMQPConsumer extends AMQPSampler implements Interruptible, TestStat
 
     private static final Logger log = LoggingManager.getLoggerForClass();
 
-    public static int DEFAULT_PREFETCH_COUNT = 0; // unlimited
-    public static String DEFAULT_PREFETCH_COUNT_STRING = Integer.toString(DEFAULT_PREFETCH_COUNT);
-    private final static String PREFETCH_COUNT = "AMQPConsumer.PrefetchCount";
-
-    public static boolean DEFAULT_READ_RESPONSE = true;
-    private final static String READ_RESPONSE = "AMQPConsumer.ReadResponse";
-
-
     //++ These are JMX names, and must not be changed
     private static final String PREFETCH_COUNT = "AMQPConsumer.PrefetchCount";
     private static final String READ_RESPONSE = "AMQPConsumer.ReadResponse";
@@ -43,8 +35,6 @@ public class AMQPConsumer extends AMQPSampler implements Interruptible, TestStat
     private transient QueueingConsumer consumer;
     private transient String consumerTag;
 
-    private QueueingConsumer consumer;
-    private String consumerTag;
 
     public AMQPConsumer(){
         super();
