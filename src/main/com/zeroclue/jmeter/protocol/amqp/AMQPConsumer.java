@@ -35,7 +35,6 @@ public class AMQPConsumer extends AMQPSampler implements Interruptible, TestStat
     private transient QueueingConsumer consumer;
     private transient String consumerTag;
 
-
     public AMQPConsumer(){
         super();
     }
